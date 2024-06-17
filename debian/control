@@ -1,0 +1,15 @@
+Source: postmarketos-tweaks
+Maintainer: berbascum 
+Section: utils
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               debhelper-compat (= 13),
+Standards-Version: 4.5.0.3
+
+Package: postmarketos-tweaks
+Architecture: arm64
+Depends: ${misc:Depends},
+         meson,
+	 python3-yaml,
+         libhandy-1-dev,
+Description: PostmarketOS tweaks packaged for Debian

@@ -1,0 +1,6 @@
+debian/.debhelper/generated/postmarketos-tweaks
+debian/debhelper-build-stamp
+debian/files
+debian/postmarketos-tweaks.substvars
+debian/postmarketos-tweaks
+out-*

@@ -1,0 +1,7 @@
+postmarketos-tweaks (0.13.2+git20240617234445.d87f523.trixie) trixie; urgency=medium
+
+  [berbascum]
+  * (d87f523) Add pmos tweaks 0.13.2 to pkg_rootfs_dir 
+  * (c1938f5) Add debian packaging 
+
+ -- berbascum <berbascum@ticv.cat>  Mon, 17 Jun 2024 23:44:45 +0200

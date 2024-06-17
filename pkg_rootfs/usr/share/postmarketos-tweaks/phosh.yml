@@ -1,0 +1,110 @@
+- name: Phosh
+  weight: 10
+  sections:
+    - name: Clock
+      weight: 10
+      settings:
+        - name: Weekday
+          type: boolean
+          backend: gsettings
+          key: org.gnome.desktop.interface.clock-show-weekday
+        - name: Date
+          type: boolean
+          backend: gsettings
+          key: org.gnome.desktop.interface.clock-show-date
+        - name: Seconds
+          type: boolean
+          backend: gsettings
+          key: org.gnome.desktop.interface.clock-show-seconds
+    - name: Battery
+      weight: 10
+      settings:
+        - name: Show percentage
+          type: boolean
+          backend: gsettings
+          key: org.gnome.desktop.interface.show-battery-percentage
+    - name: Performance
+      weight: 20
+      settings:
+        - name: Animations
+          help: Animations in Phosh and GTK can be disabled for performance
+          type: boolean
+          backend: gsettings
+          key: org.gnome.desktop.interface.enable-animations
+    - name: Homescreen
+      weight: 25
+      settings:
+        - name: Application filter
+          help: Enable the button to filter out non-adaptive apps in the application list
+          type: boolean
+          backend: gsettings
+          gtype: flags
+          key: sm.puri.phosh.app-filter-mode
+          map:
+            true: 1
+            false: 0
+    - name: Lockscreen
+      weight: 27
+      settings:
+        - name: Shuffle keypad
+          help: Whether to shuffle the numbers on the keypad
+          type: boolean
+          backend: gsettings
+          key: sm.puri.phosh.lockscreen.shuffle-keypad
+    - name: Display notch tweaks
+      weight: 30
+      settings:
+        - name: Move clock
+          help: Make the clock off-center for phones with notches
+          type: number
+          backend: css
+          key: ~/.config/gtk-3.0/gtk.css
+          selector: .phosh-topbar-clock
+          guard: phosh-clock-notch
+          min: 0
+          max: 300
+          step: 10
+          css:
+            margin-left: "%px"
+        - name: Vertical spacing
+          help: Extra space to the left and right of the indicators to work around rounded corners
+          type: number
+          backend: css
+          key: ~/.config/gtk-3.0/gtk.css
+          selector: .phosh-panel-btn
+          guard: phosh-panel-btn-space
+          min: 0
+          max: 60
+          step: 1
+          css:
+            margin-left: "%px"
+            margin-right: "%px"
+
+- name: Appearance
+  weight: 30
+  sections:
+    - name: Phosh
+      weight: 10
+      settings:
+        - name: Lockscreen background
+          help: Background image for the Phosh lockscreen
+          type: file
+          backend: css
+          key: ~/.config/gtk-3.0/gtk.css
+          selector: phosh-lockscreen, .phosh-lockshield
+          guard: phosh-lockscreen-background
+          css:
+            background-image: "%"
+            background-size: cover
+            background-position: center
+        - name: Application list background
+          help: Background image for the Phosh lockscreen
+          type: file
+          backend: css
+          key: ~/.config/gtk-3.0/gtk.css
+          selector: phosh-app-grid
+          guard: phosh-applist-background
+          css:
+            background-image: "%"
+            background-size: cover
+            background-position: center

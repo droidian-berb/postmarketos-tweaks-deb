@@ -1,0 +1,30 @@
+- name: Power
+  weight: 20
+  sections:
+    - name: PinePhone Battery control
+      weight: 10
+      settings:
+        - name: Maximum charge level
+          type: choice
+          map:
+            80% (4.10V): 4100000
+            85% (4.15V): 4150000
+            90% (4.20V): 4200000
+            100% (4.35V): 4350000
+          help: Limit the maximum level of charge for the battery which increases battery durability.
+          backend: sysfs
+          key: /sys/class/power_supply/axp20x-battery/voltage_max_design
+          stype: int
+          multiplier: 1
+- name: About
+  weight: 9999
+  sections:
+    - name: Hardware
+      settings:
+        - name: Memory speed
+          weight: 25
+          type: info
+          stype: int
+          backend: sysfs
+          key: /sys/firmware/devicetree/base/memory/ram_freq
+          readonly: true

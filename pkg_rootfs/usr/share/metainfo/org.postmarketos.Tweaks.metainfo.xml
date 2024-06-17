@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021 Martijn Braam -->
+<component type="desktop-application">
+    <id>org.postmarketos.Tweaks</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0</project_license>
+    <name>postmarketOS Tweaks</name>
+    <summary>Mobile settings tweak application</summary>
+    <description>
+        <p>
+            A Gnome-Tweaks like application for modifying phone settings
+        </p>
+    </description>
+    <launchable type="desktop-id">org.postmarketos.Tweaks.desktop</launchable>
+    <provides>
+        <binary>pmos-tweaks</binary>
+    </provides>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://brixitcdn.net/metainfo/tweaks.png</image>
+        </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1"/>
+    <releases>
+        <release version="0.13.2" date="2024-04-18">
+            <description>
+                <ul>
+                    <li>Support for more CPU core names</li>
+                    <li>Better handling of errors thrown by settings backends</li>
+                    <li>Minor spelling fix</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.13.1" date="2023-05-19">
+            <description>
+                <ul>
+                    <li>Respect ~/.themes and ~/.icons when looking for themes</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.13.0" date="2022-11-04">
+            <description>
+                <ul>
+                    <li>Add support for the gnome/adwaita style preference</li>
+                    <li>Switch to stylemanager for better gnome integration</li>
+                </ul>
+            </description>
+    	  </release>
+
+        <release version="0.12.0" date="2022-05-12">
+            <description>
+                <ul>
+                    <li>Add support for configuring Sxmo colors</li>
+                </ul>
+            </description>
+    	  </release>
+    
+        <release version="0.11.0" date="2022-03-24">
+            <description>
+                <ul>
+                    <li>Fix custom audio profile generation</li>
+                    <li>Update styling for a more modern look</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.10.0" date="2022-03-14">
+            <description>
+                <ul>
+                    <li>Add DMI firmware info on the About page</li>
+                    <li>Prefer DTB device model over the DMI model</li>
+                    <li>Hide the memory speed on the PinePhone if the data is invalid</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.9.0" date="2021-11-23">
+            <description>
+                <ul>
+                    <li>Better CPU information for 32 bit ARM</li>
+                    <li>Complete refactor of the backends</li>
+                    <li>Added a Phosh setting for the adaptive app filter</li>
+                    <li>Hide sections without any valid settings in them</li>
+                    <li>Fix icon in Gnome/Phosh</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.8.0" date="2021-09-29">
+            <description>
+                <ul>
+                    <li>Support setting the gnome sound theme</li>
+                    <li>Added a custom sound theme editor</li>
+                    <li>Fixed double tap to navigate on the mobile layout</li>
+                    <li>Better boolean parsing for the osk-sdl.conf file</li>
+                    <li>Added StartupNotify for Phosh</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.7.0" date="2021-07-14">
+            <description>
+                <ul>
+                    <li>Support setting the Phosh backgrounds</li>
+                    <li>Add Purism formfactor metadata</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="0.6.0" date="2021-04-21">
+            <description>
+                <p>
+                    Support the battery configuration on the PinePhone
+                </p>
+            </description>
+        </release>
+
+        <release version="0.4.0" date="2021-04-09">
+            <description>
+                <p>
+                    Default on sidebar in mobile view
+                </p>
+            </description>
+        </release>
+
+        <release version="0.1.0" date="2021-04-05">
+            <description>
+                <p>
+                    First release
+                </p>
+            </description>
+        </release>
+    </releases>
+</component>
